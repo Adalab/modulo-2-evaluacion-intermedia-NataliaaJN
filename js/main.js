@@ -12,7 +12,6 @@ const computerResult= document.querySelector('.js-computerResult');
 
 const resetBtn= document.querySelector('.js-reset');
 
-console.log("test")
 // FUNCTIONS:
 
 // Generate random number
@@ -27,7 +26,7 @@ function randomMovement(){
     if(computerChoice<4){
         computerChoice= 'rock';
     }
-    if(computerChoice>= 4 &&  computerChoice <=6){
+    else if(computerChoice>= 4 &&  computerChoice <=6){
         computerChoice= 'paper';
     }
     else{
@@ -77,16 +76,17 @@ function addOneToQuerySelectorNumber(querySelector) {
 
 function checkResult(userAttempt, computerChoice){
     const preResult = `Elección de la computadora: ${computerChoice} ->`;
+    console.log(userAttempt);
     if(userAttempt === computerChoice ){
         result.innerHTML= `${preResult} Empate`;
         addOneToQuerySelectorNumber(playerResult);
         addOneToQuerySelectorNumber(computerResult);
     }
     else if(wins[userAttempt] === computerChoice) {
-        result.innerHTML= `${preResult} Victoria`;
+        result.innerHTML= `${preResult} ¡Enhorabuena! Has ganado`;
         addOneToQuerySelectorNumber(playerResult);
     } else {
-        result.innerHTML= `${preResult} Derrota`;
+        result.innerHTML= `${preResult} Ups... Has perdido`;
         addOneToQuerySelectorNumber(computerResult);
     }
     

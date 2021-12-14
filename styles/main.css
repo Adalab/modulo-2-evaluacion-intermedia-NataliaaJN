@@ -1,3 +1,46 @@
 .hidden{
     display: none;
 }
+
+.body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(to top right, rgb(2, 11, 90), rgb(177, 31, 177) 99%);
+    color: white;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .wrapper{
+        margin-top: 150px;
+        border: 3px solid violet;
+        padding: 50px;
+    }
+    .label{
+        display: flex;
+        justify-content: center;
+    }
+    .selectContainer{
+        display: flex;
+        justify-content: center;
+    }
+    .title{
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .btns{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    @media(min-width: 768px){
+        .body{
+        font-size: 18px;}
+    }
+    @media(min-width: 1024px){
+        .body{
+        font-size: 24px;}
+    }

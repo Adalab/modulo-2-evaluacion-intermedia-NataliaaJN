@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <title>Piedra, papel y tijera</title>
-</head>
-<body>
-    <header class="header">
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <header class="header">
         <h1 class="title">Juego piedra, papel y tijera</h1>
-    </header>
-    <main class="main">
+      </header>
+      <main class="main">
         <form class="form" action="">
-            <label class="label js-label" for="number">Introduce aquí tu jugada:</label>
-            <select class="select js-select" id="number" type="number" placeholder="Seleccione su jugada">
-                <option value="rock">Rock</option>
-                <option value="paper">Paper</option>
-                <option value="scissor">Scissor</option>
+          <div class="selectContainer">
+            <label class="label js-label" for="number"
+              >Introduce aquí tu jugada:</label
+            >
+            <select
+              class="select js-select"
+              id="number"
+              type="number"
+              placeholder="Seleccione su jugada"
+            >
+              <option value="rock">Rock</option>
+              <option value="paper">Paper</option>
+              <option value="scissors">Scissor</option>
             </select>
-            <button class="btnPlay js-btn" type="submit" value="Jugar">Jugar</button>
-            <button class="js-reset hidden">Reiniciar Juego</button>
+          </div>
+          <div class="btns">
+            <button class="btnPlay js-btn" type="submit" value="Jugar">
+              Jugar
+            </button>
+            <button class="js-reset hidden">Reiniciar juego</button>
+          </div>
         </form>
         <p class="result js-result">Vamos a jugar</p>
-        <p class="user js-user">Jugador: <span class="js-playerResult">0</span></p>
-        <p class="computer js-computer">Computadora: <span class="js-computerResult">0</span></p>
-    </main>
+        <p class="user js-user">
+          Jugador: <span class="js-playerResult">0</span>
+        </p>
+        <p class="computer js-computer">
+          Computadora: <span class="js-computerResult">0</span>
+        </p>
+      </main>
+    </div>
 
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>
