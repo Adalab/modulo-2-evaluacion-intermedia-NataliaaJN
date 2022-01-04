@@ -4,45 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/main.css" />
     <title>Piedra, papel y tijera</title>
   </head>
   <body class="body">
     <div class="wrapper">
       <header class="header">
-        <h1 class="title">Juego piedra, papel y tijera</h1>
+        <h1 class="title">piedra, papel y tijera</h1>
       </header>
       <main class="main">
-        <form class="form" action="">
+        <form class="form">
           <div class="selectContainer">
             <label class="label js-label" for="number"
               >Introduce aquí tu jugada:</label
             >
-            <select
-              class="select js-select"
-              id="number"
-              type="number"
-              placeholder="Seleccione su jugada"
-            >
-              <option value="rock">Rock</option>
-              <option value="paper">Paper</option>
-              <option value="scissors">Scissor</option>
-            </select>
-          </div>
-          <div class="btns">
-            <button class="btnPlay js-btn" type="submit" value="Jugar">
-              Jugar
-            </button>
-            <button class="js-reset hidden">Reiniciar juego</button>
+            <div class="selectAndPlayBtnContainer">
+              <select
+                class="select js-select"
+                id="number"
+                type="number"
+                required
+              >
+                <option selected hidden disabled value="choose">Seleccione su jugada</option>
+                <option class="option" value="rock">Piedra</option>
+                <option class="option" value="paper">Papel</option>
+                <option class="option" value="scissors">Tijera</option>
+              </select>
+
+              <div class="btns">
+                <button class="btnPlay js-btn" type="submit" value="Jugar">
+                  Jugar
+                </button>
+                <button class="btnReset js-reset hidden">
+                  Reiniciar juego
+                </button>
+              </div>
+            </div>
           </div>
         </form>
+
         <p class="result js-result">Vamos a jugar</p>
-        <p class="user js-user">
-          Jugador: <span class="js-playerResult">0</span>
-        </p>
-        <p class="computer js-computer">
-          Computadora: <span class="js-computerResult">0</span>
-        </p>
+        <div class="userVsComputerContainer">
+          <div class="showUserResultContainer">
+            <p class="user js-user">
+              Jugador: <span class="js-playerResult">0</span>
+            </p>
+            <div class="userChoiceImg js-userChoiceImg scissorsImg"></div>
+          </div>
+          <div class="showComputerResultContainer">
+            <p class="computer js-computer">
+              Computadora: <span class="js-computerResult">0</span>
+            </p>
+            <p class="computerChoiceParragraph js-computerChoiceParragraph"></p>
+            <!-- <div class="computerChoiceImg rockImg js-computerChoiceImg"> -->
+              <!-- <img src="./images/rock.jpg" alt="">    -->
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 
